@@ -21,3 +21,6 @@ List of exclusion:
 
 ## Add Intelligent Idea Support
 You just need to add the plugin into build script and run command in console `gradlew idea`
+
+## Add Java support
+You need to add the plugin into build script.
