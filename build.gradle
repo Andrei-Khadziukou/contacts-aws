@@ -1,17 +1,37 @@
-apply plugin: 'idea'
+buildscript {
+
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath 'io.franzbecker:gradle-lombok:1.11'
+    }
+}
+
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.11'
+    id 'idea'
+}
 
 subprojects {
+
     apply plugin: 'java'
+    apply plugin: 'io.franzbecker.gradle-lombok' // allows to add dependencies
+
+    repositories {
+        mavenCentral()
+    }
+
+    // there is we specify version of Lombook project to use
+    lombok {
+        version = '1.16.4'
+    }
 }
 
 /*
-// In this section you declare where to find the dependencies of your project
-repositories {
-    // Use 'jcenter' for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
-
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time

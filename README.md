@@ -26,3 +26,7 @@ You just need to add the plugin into build script and run command in console `gr
 
 ## Add Java support
 You need to add the plugin into build script.
+
+## Add support Lombok
+You need to add the build script section to describe dependency source and dependencies themself.
+After that specify plugins and configure version to download and to apply as dependency.
