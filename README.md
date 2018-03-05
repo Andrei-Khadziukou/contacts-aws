@@ -2,6 +2,22 @@
 
 The application holds the list of users and is based on AWS.
 
+# Deployment process #
+For deployment you need to follow next steps:
+- Build project (just use command `gradlew build`)
+- Navigate to the handler module, open the 'build/distributions' folder
+- the 'handler.zip' is distribution package that we need to deploy to AWS as lambda function
+- Navigate to ASW site, login
+- Create a new lambda function or use existing one
+    - click on create lambda button
+    - provide lambda function name
+    - choose 'Java 8'
+    - choose role for lambda or create a new one
+    - create 
+- Upload distribution package to lambda function
+- Provide the name of the handler that should be used, for our case `com.epam.constacts.handler.UserServiceHandler::handleRequest`
+- Save updated lambda function (it perform distribution package uploading)   
+
 # Project initialization
 ## Adding gradle support
 You need just go into the root project folder and to put the command `gradle init`
