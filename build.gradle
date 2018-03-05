@@ -1,3 +1,5 @@
+apply plugin: 'idea'
+
 buildscript {
 
     repositories {
@@ -9,11 +11,6 @@ buildscript {
     dependencies {
         classpath 'io.franzbecker:gradle-lombok:1.11'
     }
-}
-
-plugins {
-    id 'io.franzbecker.gradle-lombok' version '1.11'
-    id 'idea'
 }
 
 subprojects {
