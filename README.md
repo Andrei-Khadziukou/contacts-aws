@@ -30,3 +30,6 @@ You need to add the plugin into build script.
 ## Add support Lombok
 You need to add the build script section to describe dependency source and dependencies themself.
 After that specify plugins and configure version to download and to apply as dependency.
+
+## Add AWS support ##
+You just need to configure gradle script (see 'handler/build.gradle'). It helps to add all necessary dependencies to work with AWS lambda functions.  
