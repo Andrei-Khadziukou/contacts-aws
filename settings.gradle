@@ -1,3 +1,4 @@
 rootProject.name = 'contacts-aws'
 
 include 'model'
+include 'handler'
